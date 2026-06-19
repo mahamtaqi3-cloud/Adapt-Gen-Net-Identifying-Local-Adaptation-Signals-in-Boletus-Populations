@@ -1,0 +1,26 @@
+{
+"apiVersion": "V2",
+"assemblies": [
+{
+  "files": [
+    {
+      "filePath": "data_summary.tsv",
+      "fileType": "DATA_TABLE",
+      "uncompressedLengthBytes": "357"
+    },
+    {
+      "filePath": "assembly_data_report.jsonl",
+      "fileType": "DATA_REPORT",
+      "uncompressedLengthBytes": "2541"
+    }
+  ]
+},{
+  "accession": "GCA_054741165.1",
+  "files": [
+    {
+      "filePath": "GCA_054741165.1/GCA_054741165.1_BolEdBiel_h2_genomic.fna",
+      "fileType": "GENOMIC_NUCLEOTIDE_FASTA",
+      "uncompressedLengthBytes": "42345010"
+    }
+  ]
+}]}
