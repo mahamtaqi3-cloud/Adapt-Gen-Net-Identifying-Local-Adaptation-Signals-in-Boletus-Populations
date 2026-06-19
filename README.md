@@ -2,7 +2,7 @@
 
 ## 📖 Project Overview
 
-**Adapt-Gen-Net** is an end-to-end bioinformatics pipeline designed to detect signatures of local adaptation in *Boletus* populations. By integrating large-scale genomic variation data (SNPs) with high-resolution climatic variables, this pipeline employs Graph Neural Network (GNN) architectures to identify candidate genomic regions undergoing selection.
+**Adapt-Gen-Net** is an end-to-end bioinformatics pipeline designed to detect signatures of local adaptation in *Boletus Edulus* populations. By integrating large-scale genomic variation data (SNPs) with high-resolution climatic variables, this pipeline employs Graph Neural Network (GNN) architectures to identify candidate genomic regions undergoing selection.
 
 This project bridges the gap between environmental stressors and genomic evolution, providing a scalable framework for evolutionary biologists to prioritize candidate genes for downstream functional validation.
 
