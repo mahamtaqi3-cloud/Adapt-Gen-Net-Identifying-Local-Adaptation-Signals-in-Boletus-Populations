@@ -33,7 +33,7 @@ To replicate the analysis or explore the pipeline architecture:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Adapt-Gen-Net.git
+git clone [https://github.com/mahamtaqi3-cloud/Adapt-Gen-Net-Identifying-Local-Adaptation-Signals-in-Boletus-Populations.git](https://github.com/mahamtaqi3-cloud/Adapt-Gen-Net-Identifying-Local-Adaptation-Signals-in-Boletus-Populations.git)
 
 # Install dependencies
 pip install -r requirements.txt
@@ -41,6 +41,4 @@ pip install -r requirements.txt
 # Run the analysis pipeline
 python -m pipeline.summarize_findings
 python -m pipeline.plot_manhattan
-
-```
 
