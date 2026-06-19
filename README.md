@@ -1,8 +1,8 @@
-# Adapt-Gen-Net: Identifying Local Adaptation Signals in *Boletus* Populations
+# Adapt-Gen-Net: Identifying Local Adaptation Signals in *Boletus Edulis* Populations
 
 ## 📖 Project Overview
 
-**Adapt-Gen-Net** is an end-to-end bioinformatics pipeline designed to detect signatures of local adaptation in *Boletus Edulus* populations. By integrating large-scale genomic variation data (SNPs) with high-resolution climatic variables, this pipeline employs Graph Neural Network (GNN) architectures to identify candidate genomic regions undergoing selection.
+**Adapt-Gen-Net** is an end-to-end bioinformatics pipeline designed to detect signatures of local adaptation in *Boletus Edulis* populations. By integrating large-scale genomic variation data (SNPs) with high-resolution climatic variables, this pipeline employs Graph Neural Network (GNN) architectures to identify candidate genomic regions undergoing selection.
 
 This project bridges the gap between environmental stressors and genomic evolution, providing a scalable framework for evolutionary biologists to prioritize candidate genes for downstream functional validation.
 
@@ -24,7 +24,7 @@ The pipeline is structured into five modular stages to ensure transparency and r
 
 ## 📊 Key Results & Insights
 
-* **Local Adaptation Mapping:** Identified clusters of SNPs within non-coding regulatory regions, suggesting potential enhancer-mediated adaptive responses in *Boletus* populations.
+* **Local Adaptation Mapping:** Identified clusters of SNPs within non-coding regulatory regions, suggesting potential enhancer-mediated adaptive responses in *Boletus Edulis* populations.
 * **Visualization:** Custom Manhattan plots identify selection sweeps across the genome, facilitating the rapid identification of high-priority candidate genes.
 
 ## 🚀 Getting Started
