@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Results and temporary data
+results/
+*.png
+*.csv
+
+# System files
+.DS_Store
+.ipynb_checkpoints/
+
+# Trained Models (If file is big)
+*.pth
+*.pt
