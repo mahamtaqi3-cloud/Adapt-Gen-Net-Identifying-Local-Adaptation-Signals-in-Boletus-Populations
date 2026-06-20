@@ -7,34 +7,34 @@ import os
 input_size = X_tensor.shape[1]
 model = AdaptGenNet(input_dim=input_size)
 
-# 2. Trained Model Load Karein
-# Yeh tabhi chalega agar 'results' folder mein model save hai
+# 2. Load Trained Model 
+# This will work when model will be saved in 'results' folder'
 model_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'results', 'adapt_gen_model.pth')
 
 if os.path.exists(model_path):
     model.load_state_dict(torch.load(model_path))
     print("--- ✅ Trained model successfully loaded! ---")
 else:
-    print("--- ⚠️ Model file nahi mili, training ke baad check karein. ---")
+    print("--- ⚠️ Model file not found, check after training. ---")
 
 # 3. Evaluation
-model.eval() # Model ko evaluation mode mein daalein
+model.eval() # Put model in evaluation mode
 with torch.no_grad():
     predictions = model(X_tensor)
     
-    # Loss check karein
+    # Check loss
     criterion = torch.nn.MSELoss()
     loss = criterion(predictions, Y_tensor)
     
     print(f"\n--- 📈 Evaluation Results ---")
     print(f"Final Test Loss (MSE): {loss.item():.4f}")
     
-    # Kuch predictions dikhayein
+    # Show some 
     print("\nSample Predictions vs Actual:")
     for i in range(min(5, len(Y_tensor))):
         print(f"Actual: {Y_tensor[i].item():.2f} | Predicted: {predictions[i].item():.2f}")
 
-# Training khatam hone ke baad model save karein
+# Save model after training
 os.makedirs('results', exist_ok=True)
 torch.save(model.state_dict(), 'results/adapt_gen_model.pth')
-print("--- ✅ Model 'results/adapt_gen_model.pth' mein save ho gaya! ---")
+print("--- ✅ Model is saved in 'results/adapt_gen_model.pth'! ---")
