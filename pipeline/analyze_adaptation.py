@@ -24,7 +24,7 @@ if os.path.exists('trained_model.pth'):
 
     # 4. Top 10 Indices
     top_indices = np.argsort(importance)[-10:][::-1]
-    print("🌟 TOP 10 ADAPTIVE SNP INDICES:")
+    print("🌟 TOP ADAPTIVE SNP INDICES:")
     print(top_indices)
 
     # 5. Save results
