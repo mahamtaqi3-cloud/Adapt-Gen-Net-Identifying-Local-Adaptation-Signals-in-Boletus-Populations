@@ -8,30 +8,30 @@ from pipeline.gnn_model import AdaptGenNet
 input_size = X_tensor.shape[1]
 model = AdaptGenNet(input_dim=input_size)
 
-# 2. Loss function aur Optimizer
-criterion = nn.MSELoss()  # Regression task ke liye MSE best hai
+# 2. Loss function and Optimizer
+criterion = nn.MSELoss()  # MSE is best for Regression task 
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # 3. Training Loop
-print("--- 🚀 Training shuru ho rahi hai... ---")
+print("--- 🚀 Training is starting... ---")
 model.train()
 
-for epoch in range(100):  # 100 baar data par process hoga
+for epoch in range(100):  # Processed for 100 times
     # Zero gradients
     optimizer.zero_grad()
     
-    # Forward pass: model predict karega
+    # Forward pass: model will predict
     outputs = model(X_tensor)
     
-    # Loss calculate karein
+    # Calculate loss
     loss = criterion(outputs, Y_tensor)
     
-    # Backward pass: seekhna (learning)
+    # Backward pass: (learning)
     loss.backward()
     optimizer.step()
     
-    # Har 10th epoch par progress dikhayein
+    # Progress at every 10th epoch
     if (epoch + 1) % 10 == 0:
         print(f'Epoch [{epoch+1}/100], Loss: {loss.item():.4f}')
 
-print("--- ✅ Training khatam ho gayi! ---")
+print("--- ✅ Training finished! ---")
