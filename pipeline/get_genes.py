@@ -8,24 +8,24 @@ results_path = os.path.join(os.path.dirname(base_path), 'results', 'adapt_gen_mo
 
 # 2. Load the model
 from pipeline.gnn_model import AdaptGenNet
-from pipeline.prepare_gnn_data import X_tensor # Tensors ki shape ke liye
+from pipeline.prepare_gnn_data import X_tensor # For shapes of tensors
 
 model = AdaptGenNet(input_dim=X_tensor.shape[1])
 model.load_state_dict(torch.load(results_path))
 model.eval()
 
-# 3. Weights Extract Karein
-# Hum pehli layer (fc1) ke weights ko dekh rahe hain
+# 3. Extract the Weights 
+# Watching first weight
 weights = model.fc1.weight.data.abs().mean(dim=0).numpy()
 
 # 4. Features ke saath map karein
 feature_names = ['CHELSA_bio01', 'CHELSA_bio12', 'CHELSA_bio15']
 importance_df = pd.DataFrame({'Feature': feature_names, 'Importance': weights})
 
-# 5. Sort aur Save karein
+# 5. Sort and Save 
 importance_df = importance_df.sort_values(by='Importance', ascending=False)
 print("\n--- 🧬 Feature Importance (Top Genes/Features) ---")
 print(importance_df)
 
 importance_df.to_csv('results/feature_importance.csv', index=False)
-print("\n--- ✅ Results 'results/feature_importance.csv' mein save ho gaye! ---")
+print("\n--- ✅ Results 'results/feature_importance.csv' are saved! ---")
