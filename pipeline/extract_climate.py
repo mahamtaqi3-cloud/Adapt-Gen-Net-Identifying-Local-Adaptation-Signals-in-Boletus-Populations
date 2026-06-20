@@ -5,9 +5,9 @@ import os
 # 1. Load the metadata
 metadata = pd.read_csv('sample_metadata.csv')
 
-# 2. Define path to your environment data folder
-# Purana path: climate_dir = '../data/environment_data'
-# Naya path (jo aapke folder structure ke hisaab se sahi hai):
+# 2. Define path to  environment data folder
+# Old path: climate_dir = '../data/environment_data'
+# New path (that is correct according to folder structure):
 climate_dir = '../data/environment_data'
 # 2. Define path to your environment data folder
 # Apne PC ka poora path yahan copy-paste karein:
