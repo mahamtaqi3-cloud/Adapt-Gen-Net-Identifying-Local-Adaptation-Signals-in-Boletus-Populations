@@ -3,19 +3,19 @@ import rasterio
 import csv
 import os
 
-# 1. Paths ko automatically detect karein
+# 1. Detect Paths automatically  
 base_dir = os.getcwd()
-# Yeh line check karegi ke assembly file aapke 'data' folder mein hai
+# This will check line that assembly file is in 'data' folder
 json_file = os.path.join(base_dir, "data", "assembly_data_report.jsonl")
-# Yeh line climate file ko 'environment_data' folder mein dhoondegi
+# This line will find climate file in 'environment_data' folder 
 tif_file = os.path.join(base_dir, "environment_data", "CHELSA_bio01_1981-2010_V.2.1.tif")
 output_csv = "climate_genomic_data.csv"
 
-print(f"Dataset dhoond raha hoon...")
+print(f" Finding Dataset...")
 
 # 2. File Check
 if not os.path.exists(json_file):
-    print(f"ERROR: File nahi mili yahan: {json_file}")
+    print(f"ERROR: File not found here: {json_file}")
     exit()
 
 # 3. Processing
@@ -42,7 +42,7 @@ try:
                 writer.writerow([data.get('accession'), lat, lon, val])
                 print(f"Processed: {data.get('accession')} -> Climate Value: {val}")
 
-    print(f"\nSUCCESS! Kaam ho gaya. Data '{output_csv}' mein save ho gaya hai.")
+    print(f"\nSUCCESS! Work Done. Data '{output_csv}' is saved.")
 
 except Exception as e:
-    print(f"Error aa gaya: {e}")
+    print(f"Error: {e}")
