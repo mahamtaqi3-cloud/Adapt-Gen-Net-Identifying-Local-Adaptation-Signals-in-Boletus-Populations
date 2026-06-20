@@ -6,7 +6,7 @@ import os
 base_path = os.path.dirname(os.path.abspath(__file__))
 results_path = os.path.join(os.path.dirname(base_path), 'results', 'adapt_gen_model.pth')
 
-# 2. Model Load Karein
+# 2. Load the model
 from pipeline.gnn_model import AdaptGenNet
 from pipeline.prepare_gnn_data import X_tensor # Tensors ki shape ke liye
 
