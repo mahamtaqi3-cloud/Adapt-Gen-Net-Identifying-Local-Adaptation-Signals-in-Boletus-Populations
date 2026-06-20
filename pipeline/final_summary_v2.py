@@ -2,11 +2,11 @@ import pandas as pd
 import os
 
 def summarize():
-    # Sahi file path: results folder mein annotated_snps.csv ko dhoondna
+    # Correct file path: find  annotated_snps.csv in folder
     file_path = os.path.join('results', 'annotated_snps.csv')
     
     if not os.path.exists(file_path):
-        print(f"❌ Error: {file_path} file nahi mili.")
+        print(f"❌ Error: {file_path} file not found.")
         return
 
     df = pd.read_csv(file_path)
@@ -17,9 +17,9 @@ def summarize():
     genes = df[df['gene_annotation'] != 'Intergenic']
     
     if genes.empty:
-        print("\n⚠️ Koi gene-based SNPs nahi mile.")
+        print("\n⚠️ No gene-based SNPs found.")
     else:
-        print("\n--- 🏆 Top 10 Adaptive Genes ---")
+        print("\n--- 🏆 Top Adaptive Genes ---")
         print(genes['gene_annotation'].value_counts().head(10))
 
 if __name__ == "__main__":
