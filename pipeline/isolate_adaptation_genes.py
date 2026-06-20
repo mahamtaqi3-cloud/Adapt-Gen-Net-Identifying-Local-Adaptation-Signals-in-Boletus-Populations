@@ -78,6 +78,6 @@ print(f"🎯 ANALYSIS COMPLETE: Top adaptive elements isolated successfully!")
 print(f"📁 Scientific report committed to: {output_csv} ✅")
 print("-" * 60)
 
-# Display Top 10 Evolutionary Drivers
-print("\n🔥 --- TOP 10 EVOLUTIONARY SIGNAL DRIVERS FOUND IN BOLETUS GENOME ---")
+# Display Top Evolutionary Drivers
+print("\n🔥 --- TOP EVOLUTIONARY SIGNAL DRIVERS FOUND IN BOLETUS GENOME ---")
 print(report_df.head(10).to_string(index=False))
