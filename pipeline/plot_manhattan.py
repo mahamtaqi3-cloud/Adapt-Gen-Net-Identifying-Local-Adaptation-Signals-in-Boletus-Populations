@@ -11,14 +11,14 @@ def plot_manhattan():
 
     df = pd.read_csv(file_path)
     
-    # Check karein ki data mein 'position' column sahi hai
+    # Check whether the 'position' column in the data is correct.
     if 'position' not in df.columns:
-        print("❌ Error: CSV file mein 'position' column nahi hai.")
+        print("❌ Error: CSV file does not contain a 'position' column..")
         return
 
     plt.figure(figsize=(12, 6))
     
-    # Points ko thoda jitter (spread) dein taake wo ek line na dikhein
+    # Add a slight jitter (spread) to the points so they don't appear in a single line.
     plt.scatter(df['position'], df.index, alpha=0.3, c='teal', s=5)
     
     plt.title('Manhattan Plot: SNP Distribution across Genome')
@@ -27,7 +27,7 @@ def plot_manhattan():
     
     output_path = os.path.join('results', 'manhattan_plot.png')
     plt.savefig(output_path)
-    print(f"✅ Manhattan plot save ho gaya: {output_path}")
+    print(f"✅ Manhattan plot has been saved: {output_path}")
     plt.show()
 
 if __name__ == "__main__":
