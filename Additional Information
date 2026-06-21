@@ -1,0 +1,15 @@
+Data Acquisition: Utilized Boletus edulis reference genome from NCBI (Bielefeld University assembly) and raw sequencing reads from BioProject PRJNA1010140 (SRA accessions: SRR28539990, SRR31962173, SRR31962177, SRR31962179, SRR31962181).
+
+Variant Calling Pipeline: Processed raw FASTQ reads through a standardized bioinformatics workflow:
+
+Quality Control: FastQC.
+
+Alignment: BWA (Burrows-Wheeler Aligner) mapped reads to the reference FASTA.
+
+Processing: SAMtools/BCFtools for sorting, indexing, and SNP/Indel variant calling.
+
+Data Structuring: Automated filtering and normalization using Python (Pandas).
+
+Environmental Integration: Performed spatial mapping of genomic samples using CHELSA climate raster datasets (BIO01, BIO02, BIO12, BIO15). Integrated environmental variables with individual genotypes using rasterio to generate a structured feature matrix.
+
+Outcome: Created a high-dimensional feature set ready for downstream Graph Neural Network (GNN) training to model the adaptive landscape of the species.
